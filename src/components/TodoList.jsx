@@ -1,8 +1,6 @@
-import React, { useReducer } from "react";
-import { reducerFn, INITIAL_STATE } from "../reducers/reducers";
+import React from "react";
 
-const TodoList = () => {
-  const [state, dispatch] = useReducer(reducerFn, INITIAL_STATE);
+const TodoList = ({ state }) => {
   return (
     <div>
       {state ? (

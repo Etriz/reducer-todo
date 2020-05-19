@@ -8,7 +8,9 @@ export const INITIAL_STATE = [
 
 export const reducerFn = (state, action) => {
   switch (action.type) {
-    case "01":
+    case "add":
+      return [...state, { item: action.value, completed: false, id: new Date() }];
+    case "delete":
       return state;
     default:
       return state;
