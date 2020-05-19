@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <h1>Things To Do Today</h1>
       <AddTodoForm dispatch={dispatch} />
-      <TodoList state={state} />
+      <TodoList state={state} dispatch={dispatch} />
     </div>
   );
 }

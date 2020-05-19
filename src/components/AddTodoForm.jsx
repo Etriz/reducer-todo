@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const AddTodoForm = ({ dispatch }) => {
   const [inputValue, setInputValue] = useState("");
+
   const onChange = (e) => {
     e.preventDefault();
     setInputValue(e.target.value);
@@ -11,6 +12,7 @@ const AddTodoForm = ({ dispatch }) => {
     dispatch({ value: inputValue, type: "add" });
     setInputValue("");
   };
+
   return (
     <form onSubmit={addItemToList}>
       <label>
