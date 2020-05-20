@@ -8,11 +8,15 @@ export const INITIAL_STATE = [
 
 export const reducerFn = (state, action) => {
   switch (action.type) {
-    case "add":
+    case "ADD":
       return [...state, { item: action.value, completed: false, id: Date.now() }];
-    case "delete":
-      return state;
-    case "toggle":
+    case "DELETE":
+      const deleteState = state.filter((item) => {
+        if (item.completed) return null;
+        else return item;
+      });
+      return [...deleteState];
+    case "TOGGLE":
       const toggledState = state.map((item) => {
         if (item.id === action.id) return { ...item, completed: !item.completed };
         else return item;

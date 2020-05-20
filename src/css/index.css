@@ -8,9 +8,13 @@ body {
 * {
   box-sizing: border-box;
 }
+.App {
+  margin: 0 auto;
+  width: 50%;
+  min-width: 400px;
+}
 form {
   margin: 10px 0;
-  padding: 5px;
 }
 .todoItem {
   background: lightgray;
@@ -27,4 +31,25 @@ form {
 .completed {
   text-decoration: line-through;
   opacity: 50%;
+}
+.btn {
+  background: #3d94f6;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 10px;
+  margin: 10px 0;
+  border: solid #337fed 1px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover {
+  border: solid #0059a0 1px;
+  background: #1e62d0;
+  border-radius: 10px;
+  text-decoration: none;
 }

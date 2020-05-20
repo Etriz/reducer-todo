@@ -9,7 +9,7 @@ const AddTodoForm = ({ dispatch }) => {
   };
   const addItemToList = (e) => {
     e.preventDefault();
-    dispatch({ value: inputValue, type: "add" });
+    dispatch({ value: inputValue, type: "ADD" });
     setInputValue("");
   };
 

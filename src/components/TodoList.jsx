@@ -2,11 +2,14 @@ import React from "react";
 
 const TodoList = ({ state, dispatch }) => {
   const toggleCompleted = (e) => {
-    dispatch({ id: Number(e.target.id), type: "toggle" });
+    dispatch({ id: Number(e.target.id), type: "TOGGLE" });
+  };
+  const deleteCompleted = () => {
+    dispatch({ type: "DELETE" });
   };
   return (
     <div>
-      {state ? (
+      {state.length !== 0 ? (
         state.map((item) => (
           <div key={item.id} className="todoItem" onClick={toggleCompleted}>
             <h2 id={item.id} className={item.completed ? "completed" : null}>
@@ -15,8 +18,11 @@ const TodoList = ({ state, dispatch }) => {
           </div>
         ))
       ) : (
-        <h2>No List Found</h2>
+        <div className="todoItem">
+          <h2>No Items Found</h2>
+        </div>
       )}
+      <button onClick={deleteCompleted}>Clear Complete</button>
     </div>
   );
 };
