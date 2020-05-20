@@ -10,16 +10,54 @@ body {
 }
 .App {
   margin: 0 auto;
-  width: 50%;
+  width: 30%;
   min-width: 400px;
 }
+.formDiv {
+  /* margin: 10px 0 10px 25px; */
+  /* padding: 10px 0; */
+  background: lightyellow;
+  border: 1px solid lightgray;
+  border-bottom: 1px solid lightseagreen;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 5px 5px lightgray;
+}
 form {
-  margin: 10px 0;
+  line-height: 3.5;
+  border-left: 1px solid red;
+  margin-left: 25px;
+  padding-left: 10px;
+}
+input {
+  line-height: 1.75;
+  padding-left: 5px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  border: 1px solid darkgray;
+}
+.todoList {
+  box-shadow: 0 5px 5px lightgray;
+  border: 1px solid lightgray;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
 }
 .todoItem {
-  background: lightgray;
-  border-bottom: 1px solid darkgray;
-  padding: 5px;
+  border-bottom: 1px solid lightseagreen;
+  background: lightgoldenrodyellow;
+  padding: 0 5px;
+  padding-left: 25px;
+}
+.todoItem h2 {
+  line-height: 1.5;
+  text-indent: 10px;
+  border-left: 1px solid red;
+}
+.todoItem:nth-of-type(2n) {
+  background: lightyellow;
+}
+.todoItem:last-of-type {
+  border-bottom: 0;
+  border-radius: 0 0 10px 10px;
 }
 .todoItem:hover {
   cursor: pointer;
@@ -33,23 +71,16 @@ form {
   opacity: 50%;
 }
 .btn {
-  background: #3d94f6;
-  border-radius: 10px;
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: 100;
-  padding: 10px;
-  margin: 10px 0;
-  border: solid #337fed 1px;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  text-align: center;
+  padding: 5px;
+  outline: none;
+  border: 1px solid darkgray;
+  background: lightgray;
 }
-
+.btn:last-of-type {
+  border-radius: 0 5px 5px 0;
+}
 .btn:hover {
-  border: solid #0059a0 1px;
-  background: #1e62d0;
-  border-radius: 10px;
-  text-decoration: none;
+  background: gray;
+  color: white;
+  cursor: pointer;
 }
