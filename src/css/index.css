@@ -13,6 +13,9 @@ body {
   width: 30%;
   min-width: 400px;
 }
+.App h1 {
+  text-align: center;
+}
 .formDiv {
   /* margin: 10px 0 10px 25px; */
   /* padding: 10px 0; */
@@ -33,7 +36,7 @@ input {
   padding-left: 5px;
   border-radius: 5px 0 0 5px;
   outline: none;
-  border: 1px solid darkgray;
+  border: 1px solid gray;
 }
 .todoList {
   box-shadow: 0 5px 5px lightgray;
@@ -73,8 +76,9 @@ input {
 .btn {
   padding: 5px;
   outline: none;
-  border: 1px solid darkgray;
-  background: lightgray;
+  border: 1px solid gray;
+  background: darkgray;
+  color: white;
 }
 .btn:last-of-type {
   border-radius: 0 5px 5px 0;

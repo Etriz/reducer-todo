@@ -1,13 +1,13 @@
 import React from "react";
 
-const TodoList = ({ state, dispatch }) => {
+const TodoList = (props) => {
   const toggleCompleted = (e) => {
-    dispatch({ id: Number(e.target.id), type: "TOGGLE" });
+    props.dispatch({ value: Number(e.target.id), type: "TOGGLE" });
   };
   return (
     <div className="todoList">
-      {state.length !== 0 ? (
-        state.map((item) => (
+      {props.storedValue ? (
+        props.storedValue.map((item) => (
           <div key={item.id} className="todoItem" onClick={toggleCompleted}>
             <h2 id={item.id} className={item.completed ? "completed" : null}>
               {item.item}

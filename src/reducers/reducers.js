@@ -6,6 +6,8 @@ export const INITIAL_STATE = [
   },
 ];
 
+export const actionTypes = { add: "ADD", delete: "DELETE", toggle: "TOGGLE" };
+
 export const reducerFn = (state, action) => {
   switch (action.type) {
     case "ADD":
@@ -18,7 +20,7 @@ export const reducerFn = (state, action) => {
       return [...deleteState];
     case "TOGGLE":
       const toggledState = state.map((item) => {
-        if (item.id === action.id) return { ...item, completed: !item.completed };
+        if (item.value === action.value) return { ...item, completed: !item.completed };
         else return item;
       });
       return [...toggledState];

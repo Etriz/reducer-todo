@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { actionTypes } from "../reducers/reducers";
 
-const AddTodoForm = ({ dispatch }) => {
+const AddTodoForm = ({ setValueAndDispatch }) => {
   const [inputValue, setInputValue] = useState("");
 
   const onChange = (e) => {
@@ -8,12 +9,12 @@ const AddTodoForm = ({ dispatch }) => {
   };
   const addItemToList = (e) => {
     e.preventDefault();
-    dispatch({ value: inputValue, type: "ADD" });
+    setValueAndDispatch(inputValue, actionTypes.add);
     setInputValue("");
   };
   const clearCompleted = (e) => {
     e.preventDefault();
-    dispatch({ type: "DELETE" });
+    setValueAndDispatch(null, "DELETE");
   };
 
   return (
